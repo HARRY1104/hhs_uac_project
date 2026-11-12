@@ -1,12 +1,3 @@
-"""
-HHS Unaccompanied Alien Children (UAC) Program
-Proactive Care Load, Discharge Demand & Capacity Risk Intelligence Suite
-========================================================================
-End-to-End Production Streamlit Application
-Author: Senior ML Engineering Architecture
-Run command: streamlit run app.py
-"""
-
 from __future__ import annotations
 
 import io
