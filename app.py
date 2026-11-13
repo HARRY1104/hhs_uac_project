@@ -669,7 +669,7 @@ def render_streamlit_app() -> None:
         initial_sidebar_state="expanded",
     )
 
-    # Custom Executive Styling (Original Clean Interface)
+    # Custom Executive Styling (Original Clean Interface + Hide "Limit 200MB per file" text)
     st.markdown(
         """
         <style>
@@ -716,6 +716,14 @@ def render_streamlit_app() -> None:
         .kpi-sub {
             font-size: 0.80rem;
             color: #475569;
+        }
+        /* Hide "Limit 200MB per file • CSV" text inside st.file_uploader across all Streamlit versions */
+        [data-testid="stFileUploaderDropzoneInstructions"] > div > small,
+        [data-testid="stFileUploaderDropzoneInstructions"] > div > span:nth-of-type(2),
+        [data-testid="stFileUploaderDropzone"] small,
+        [data-testid="stFileUploadDropzone"] div div small,
+        [data-testid="stFileUploadDropzone"] small {
+            display: none !important;
         }
         </style>
         """,
